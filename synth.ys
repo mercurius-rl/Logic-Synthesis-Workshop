@@ -1,0 +1,22 @@
+# read source RTL
+read_verilog counter.v
+hierarchy -check -top counter
+
+# optimization
+proc; opt; fsm; opt
+
+# technology mapping
+techmap; opt
+
+# static cell mapping to D-FF RTL description
+dfflibmap -liberty /eda/pdk/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+
+# static cell mapping to combinatorial circuit description
+abc -liberty /eda/pdk/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib -constr const.sdc
+
+stat
+clean
+
+# write out netlist
+write_verilog synth.v
+#write_blif synth.blif
