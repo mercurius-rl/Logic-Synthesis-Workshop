@@ -2,7 +2,7 @@
 
 1 day workshop on RTL design and designed circuit estimation of power consumpton and chip area.
 
-**-  1. Introduction: Verilog RTL design and setting development enviroment **
+**-  1. Introduction: Verilog RTL design and setting development enviroment**
 
 設計環境：  
 Yosys    (論理合成ツール)  
@@ -29,7 +29,7 @@ enable信号が立ち上がっている場合に、クロックの立ち上が�
 このカウンタ回路を使っていきます．  
 もし、Verilogそのものの書き方が分からない方は、このコードを写経しながら練習してみると良いかもしれません．
 
-**-  2. Synthesis **
+**-  2. Synthesis**
 Synthesisとは論理合成のこと．
 
 ## yosys
@@ -44,7 +44,7 @@ yosysは主に以下のコマンドを使用します．
 yosysのコマンドは.ysにスクリプトとして記載することで、まとめて実行することが出来ます．  
 このワークショップで使うコマンドはsynth.ysにまとめています． 
 
-**-  3. Implementation(Place and Routing): Estimation of Power Consumpton and Chip Area **
+**-  3. Implementation(Place and Routing): Estimation of Power Consumpton and Chip Area**
 Implementationとは、直訳では実装．  
 FPGAやASIC設計においては配置配線のフェーズを示します．
 
